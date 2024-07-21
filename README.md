@@ -1,21 +1,3 @@
-# Tech Challenge - 4 - pedido
-
-## Introdução
-Este repositório contém o microserviço de pedidos, oferecendo as seguintes funcionalidades:
-- **customer (POST)** - Criar um novo cliente.
-- **find by cpf (GET)** - Buscar um cliente pelo CPF.
-- **checkout (POST)** - Criar um novo pedido.
-- **checkout without customer (POST)** - Criar um pedido sem informar o cliente.
-- **order (GET)** - Buscar um pedido pelo ID.
-- **product (POST)** - Criar um novo produto.
-- **product (PUT)** - Atualizar um produto existente.
-- **product list (GET)** - Listar todos os produtos.
-- **find by category (GET)** - Buscar produtos por categoria.
-- **product (REMOVE)** - Remover um produto.
-
-## Fluxo de Trabalho (Git Flow)
-Adotamos o Git Flow para uma organização eficaz do desenvolvimento:
-
 ![Git Flow](./doc/gitflow.png)
 
 - **Master/Main**: Contém o código de produção.
