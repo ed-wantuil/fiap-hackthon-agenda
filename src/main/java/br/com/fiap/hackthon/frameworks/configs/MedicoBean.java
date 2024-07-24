@@ -3,6 +3,8 @@ package br.com.fiap.hackthon.frameworks.configs;
 import br.com.fiap.hackthon.application.gateways.MedicoGateway;
 import br.com.fiap.hackthon.application.usecases.medico.BuscarMedico;
 import br.com.fiap.hackthon.application.usecases.medico.impl.BuscarMedicoImpl;
+import br.com.fiap.hackthon.frameworks.web.medico.BuscarMedicoWeb;
+import br.com.fiap.hackthon.frameworks.web.medico.impl.BuscarMedicoWebImpl;
 import br.com.fiap.hackthon.interfaces.controllers.agenda.converters.AgendaToAgendaResponse;
 import br.com.fiap.hackthon.interfaces.controllers.medico.BuscarMedicoController;
 import br.com.fiap.hackthon.interfaces.controllers.medico.converters.MedicoToMedicoResponse;
@@ -29,4 +31,8 @@ public class MedicoBean {
         return new BuscarMedicoImpl(medicoGateway);
     }
 
+    @Bean
+    BuscarMedicoWeb buscarMedicoWeb(BuscarMedicoController buscarMedicoController) {
+        return new BuscarMedicoWebImpl(buscarMedicoController);
+    }
 }

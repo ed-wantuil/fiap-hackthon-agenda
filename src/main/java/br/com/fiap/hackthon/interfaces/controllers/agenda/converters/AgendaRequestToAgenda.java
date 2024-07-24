@@ -13,7 +13,7 @@ public class AgendaRequestToAgenda {
                 .builder()
                 .id(agendaRequest.id())
                 .medico(Medico.builder()
-                        .id(agendaRequest.id())
+                        .id(agendaRequest.medicoId())
                         .build())
                 .inicio(agendaRequest.inicio())
                 .fim(agendaRequest.fim())

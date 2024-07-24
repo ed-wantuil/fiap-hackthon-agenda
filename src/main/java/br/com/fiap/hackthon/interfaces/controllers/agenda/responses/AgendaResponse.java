@@ -7,7 +7,6 @@ import lombok.Builder;
 
 @Builder
 public record AgendaResponse(String id,
-                             String medicoId,
                              LocalDateTime inicio,
                              LocalDateTime fim) {
 }

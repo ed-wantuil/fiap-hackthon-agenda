@@ -31,10 +31,12 @@ public class AgendaRepositoryImpl implements AgendaGateway {
     @Override
     public Agenda editar(final String id, final Agenda agenda) {
         var agendaEntity = springDataAgendaRepository
-                .findById(UUID.fromString(agenda.getId())).orElseThrow();
+                .findById(UUID.fromString(id)).orElseThrow();
 
         agendaEntity.setInicio(agenda.getInicio());
         agendaEntity.setFim(agenda.getFim());
+
+        agendaEntity = springDataAgendaRepository.save(agendaEntity);
 
         return agendaEntityToAgenda.convert(agendaEntity);
     }
